@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power BI Demand Analysis Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.SSnv3PaIYBd2jzOj5nldRgHaNK?pid=ImgDet&w=178&h=315&c=7&dpr=1.5&cb=idpwebp2&o=7&rm=3');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+        .card {
+            background-color: #111;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            border: 1px solid #333;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills {
+            margin-top: 20px;
+        }
+        .skills span {
+            display: inline-block;
+            background-color: #222;
+            color: #fff;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div style="position: relative; display: inline-block;">
+                <img src="https://i.makeagif.com/media/5-16-2021/-9aG0X.gif" 
+                    alt="capg Logo" 
+                    style="height: 100%; width: 100%; border-radius: 10px; object-fit: cover; object-position: top;">
+
+                <div style="
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    color: white;
+                    padding: 30px 30px;
+                    border-radius: 8px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    max-width: 90%;
+                ">
+                    Power BI Demand Analysis Dashboard<br>
+                    Data Analyst – Power BI
+                </div>
+            </div>
+            <p><strong>Oct 2024 – Jan 2023 | Mumbai, Maharashtra, India<br>
+            Capgemini Client (Internal)<br>
+                Technology Used : Power BI<br>
+                Role: Data Analyst</strong></p>
+
+            &nbsp;
+            <ul>
+                <li>Designed and developed a Power BI report to visualize project demand and match it with available employee skills using an employee master sheet.</li>
+                <li>Connected Power BI directly to Excel files to streamline data refresh and reduce manual data handling.</li>
+                <li>Enabled project managers to identify suitable employees based on skillsets, availability, and project requirements.</li>
+                <li>Created interactive visuals and filters to allow dynamic exploration of employee capabilities against project needs.</li>
+                <li>Improved resource planning efficiency by providing a centralized view of demand vs. supply across teams.</li>
+                <li>Ensured data consistency and accuracy by implementing data validation rules within Excel and Power BI.</li>
+                <li>Supported decision-making with real-time insights into workforce alignment and project staffing.</li>
+            </ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider with Arrows</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      text-align: center;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    #slider {
+      margin: 0 auto;
+      width: 600px;
+      height: 300px;
+      padding: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+      position: relative;
+    }
+
+    .slide {
+      list-style: none;
+    }
+
+    #slider > li {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      display: none;
+    }
+
+    #slider > li:first-child {
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="arrow left" id="prev">&#8249;</div>
+    <div class="arrow right" id="next">&#8250;</div>
+
+    <ul id="slider">
+      <li class="slide"><img src="images\demand\demand analysis.jpg" width="600" height="300"></li>
+      <li class="slide"><img src="images\demand\employee master analysis.jpg" width="600" height="300"></li>
+      </ul>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let slides = $('#slider > li');
+      let index = 0;
+      let total = slides.length;
+
+      function showSlide(i) {
+        slides.hide().eq(i).fadeIn(600);
+      }
+
+      function nextSlide() {
+        index = (index + 1) % total;
+        showSlide(index);
+      }
+
+      function prevSlide() {
+        index = (index - 1 + total) % total;
+        showSlide(index);
+      }
+
+      $('#next').click(nextSlide);
+      $('#prev').click(prevSlide);
+
+      // Auto slide every 4 seconds
+      setInterval(nextSlide, 4000);
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+            <div class="skills">
+                <strong>Skills:</strong><br>
+                <span>Power BI</span>
+                <span>Excel Integration</span>
+                <span>Data Visualization</span>
+                <span>Interactive Dashboards</span>
+                <span>Data Modeling</span>
+                <span>DAX (Data Analysis Expressions)</span>
+                <span>Report Design</span>
+                <span>Data Validation</span>
+                <span>Stakeholder Reporting</span>
+                <span>Project Demand Forecasting</span>
+                <span>Employee Skill Mapping</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

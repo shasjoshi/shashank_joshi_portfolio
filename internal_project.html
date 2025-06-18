@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal Project Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.SSnv3PaIYBd2jzOj5nldRgHaNK?pid=ImgDet&w=178&h=315&c=7&dpr=1.5&cb=idpwebp2&o=7&rm=3');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+        .card {
+            background-color: #111;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            border: 1px solid #333;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills {
+            margin-top: 20px;
+        }
+        .skills span {
+            display: inline-block;
+            background-color: #222;
+            color: #fff;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div style="position: relative; display: inline-block;">
+                <img src="images\capgbackground.jpg" 
+                    alt="Chanel Logo" 
+                    style="height: 100%; width: 100%; border-radius: 10px; object-fit: cover; object-position: top;">
+
+                <div style="
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    color: white;
+                    padding: 30px 30px;
+                    border-radius: 8px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    max-width: 90%;
+                ">
+                    Capgemini (Client - Internal)<br>
+                    Data Analyst – Azure
+                </div>
+            </div>
+            <p><strong>Oct 2024 – Jan 2023 | Mumbai, Maharashtra, India<br>
+            Capgemini Client (Chanel)<br>
+                Technology Used : Azure Data Factory, Azure Databricks, Power BI<br>
+                Role: Data Engineer</strong></p>
+                &nbsp;&nbsp;
+            <ul>
+                <li>Orchestrated data transformations and loaded data into the warehouse using Azure Data Factory.</li>
+                <li>Performed data cleaning and transformation in three stages using Databricks Notebooks.</li>
+                <li>Developed user-defined functions to evaluate and score employee performance across various parameters.</li>
+                <li>Aggregated scores from all parameters to calculate total points for each employee, ensuring accurate performance assessment.</li>
+                <li>Assigned ranks to employees based on their total points, reflecting their overall competencies and contributions.</li>
+                <li>Transformed and processed data using custom functions to maintain fairness and accuracy in ranking.</li>
+                <li>Created an interactive Power BI dashboard to visualize employee rankings and performance metrics, facilitating data-driven decision-making.</li>
+            </ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider with Arrows</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      text-align: center;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    #slider {
+      margin: 0 auto;
+      width: 600px;
+      height: 300px;
+      padding: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+      position: relative;
+    }
+
+    .slide {
+      list-style: none;
+    }
+
+    #slider > li {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      display: none;
+    }
+
+    #slider > li:first-child {
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="arrow left" id="prev">&#8249;</div>
+    <div class="arrow right" id="next">&#8250;</div>
+
+    <ul id="slider">
+      <li class="slide"><img src="images/ranking dashboard/report tab.jpg" width="600" height="300"></li>
+      <li class="slide"><img src="images/ranking dashboard/drill through employee details.jpg" width="600" height="300"></li>
+      <li class="slide"><img src="images/ranking dashboard/table view.jpg" width="600" height="300"></li>
+      <li class="slide"><img src="images/ranking dashboard/table view drill through.jpg" width="600" height="300"></li>
+      <li class="slide"><img src="images/ranking dashboard/emp details.jpg" width="600" height="300"></li>
+    </ul>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      let slides = $('#slider > li');
+      let index = 0;
+      let total = slides.length;
+
+      function showSlide(i) {
+        slides.hide().eq(i).fadeIn(600);
+      }
+
+      function nextSlide() {
+        index = (index + 1) % total;
+        showSlide(index);
+      }
+
+      function prevSlide() {
+        index = (index - 1 + total) % total;
+        showSlide(index);
+      }
+
+      $('#next').click(nextSlide);
+      $('#prev').click(prevSlide);
+
+      // Auto slide every 4 seconds
+      setInterval(nextSlide, 4000);
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+            <div class="skills">
+                <strong>Skills:</strong><br>
+                <span>Azure Data Factory</span>
+                <span>Databricks</span>
+                <span>Python</span>
+                <span>Power BI</span>
+                <span>Data Cleaning</span>
+                <span>ETL</span>
+                <span>Data Transformation</span>
+                <span>Performance Analytics</span>
+                <span>Dashboard Development</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
