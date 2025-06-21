@@ -1,126 +1,587 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chanel Project Dashboard</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #000;
-            color: #fff;
-            background-image: url('https://tse2.mm.bing.net/th/id/OIP.SSnv3PaIYBd2jzOj5nldRgHaNK?pid=ImgDet&w=178&h=315&c=7&dpr=1.5&cb=idpwebp2&o=7&rm=3');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 40px 20px;
-            background-color: rgba(0, 0, 0, 0.85);
-        }
-        .card {
-            background-color: #111;
-            border-radius: 15px;
-            padding: 20px;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-            border: 1px solid #333;
-        }
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        h1 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .skills {
-            margin-top: 20px;
-        }
-        .skills span {
-            display: inline-block;
-            background-color: #222;
-            color: #fff;
-            padding: 6px 12px;
-            margin: 5px;
-            border-radius: 20px;
-            font-size: 14px;
-            border: 1px solid #444;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanel - Data Migration & Integration | Microsoft Fabric Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+        :root {
+    /* Primary Colors */
+    --primary: #86fafa;      /* Light blue accent */
+    --primary-dark: #021013; /* Darker blue */
+    --primary-light: #5fd8fa; /* Lighter blue */
+    
+    /* Neutrals */
+    --pure-black: #000000;
+    --dark: #0a0a0a;
+    --darker: #121212;
+    --medium-gray: #2a2a2a;
+    --light-gray: #444444;
+    --pure-white: #ffffff;
+    --light: #f0f0f0;
+    
+    /* Backgrounds */
+    --bg-dark: #000000;
+    --bg-card: #121212;
+    
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0, 180, 216, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(0, 180, 216, 0.05) 0%, transparent 30%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--medium-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.05) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.header-image {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--medium-gray);
+}
+
+.header-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.header-image:hover img {
+    transform: scale(1.03);
+}
+
+.header-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+}
+
+.header-overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, var(--pure-white), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+    color: var(--pure-white);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meta-icon {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.meta-text {
+    font-size: 0.95rem;
+    color: var(--light);
+}
+
+.meta-text strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.project-details {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--light);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+.project-details ul {
+    list-style: none;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--light);
+}
+
+.project-details li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.gallery-container {
+    margin: 40px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    aspect-ratio: 16/9;
+    position: relative;
+    border: 1px solid var(--medium-gray);
+    background: var(--dark);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.2);
+    border-color: var(--primary);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: var(--light);
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+.skills-container {
+    margin-top: 30px;
+}
+
+.skills-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+}
+
+.skills-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--darker);
+    color: var(--light);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--medium-gray);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skill-tag:hover {
+    background: var(--primary);
+    color: var(--pure-black);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+}
+
+.skill-tag i {
+    font-size: 0.9rem;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(10, 10, 10, 0.8);
+    color: var(--primary);
+    font-size: 1.5rem;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-button:hover {
+    background: var(--primary);
+    color: var(--pure-black);
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    z-index: 1000;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--medium-gray);
+    position: relative;
+    animation: modalFadeIn 0.4s ease forwards;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+.modal-close:hover {
+    color: var(--primary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-image-container {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--medium-gray);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-description {
+    padding: 20px;
+    background: rgba(42, 42, 42, 0.6);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
+.modal-description h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.modal-description p {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-overlay h1 {
+        font-size: 1.6rem;
+    }
+    
+    .header-overlay p {
+        font-size: 1rem;
+    }
+    
+    .project-meta {
+        gap: 15px;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+    
+    .header-overlay h1 {
+        font-size: 1.4rem;
+    }
+    
+    .header-overlay {
+        padding: 20px;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
     </style>
 </head>
 <body>
+    <button class="back-button" onclick="goBack()">
+    <i class="fas fa-times"></i>
+    </button>
     <div class="container">
         <div class="card">
-            <div style="position: relative; display: inline-block;">
-                <img src="images\Untitled.png" 
-                    alt="Chanel Logo" 
-                    style="height: 300px; width: 100%; border-radius: 10px; object-fit: cover;">
-
-                <div style="
-                    position: absolute;
-                    bottom: 10px;
-                    left: 10px;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    color: white;
-                    padding: 30px 30px;
-                    border-radius: 8px;
-                    font-size: 25px;
-                    font-weight: bold;
-                    max-width: 90%;
-                ">
-                    Data Migration Transformation and <br>
-                    Integration for Client chanel
+            <div class="card-content">
+                <div class="header-image">
+                    <img src="images/Untitled.png" alt="Chanel Data Migration Project">
+                    <div class="header-overlay">
+                        <h1>Data Migration Transformation & Integration</h1>
+                        <p>Microsoft Fabric Implementation for Chanel</p>
+                    </div>
                 </div>
-            </div>
-            <p><strong>Jan 2024 – Present | Mumbai, Maharashtra, India<br>
-                Capgemini Client (Chanel)<br>
-                Technology Used : MS Fabric<br>
-                Role: Data Engineer
                 
-            </strong></p>
-            &nbsp;&nbsp;
-            <ul>
-                <li>Built and optimized scalable data pipelines using Microsoft Fabric, Azure Data Factory, Synapse Analytics, and Spark, improving processing speed by 30%.</li>
-                <li>Developed Medallion Architecture in Lakehouse, enhancing structured and unstructured data accessibility.</li>
-                <li>Implemented Fabric Dataflows and Notebooks for ETL/ELT transformations, ensuring efficient data processing and governance.</li>
-                <li>Automated data integration processes using Python, PySpark, and SQL, reducing manual efforts by 50%.</li>
-                <li>Designed and optimized Power BI datasets and semantic models, improving data visualization for stakeholders.</li>
-                <li>Monitored and maintained high availability, reliability, and performance of Fabric workloads.</li>
-                <li>Implemented RBAC and data security policies, ensuring compliance with enterprise standards.</li>
-                <li>Led end-to-end monitoring and governance using Azure Monitor and Purview.</li>
-                <li>Implemented and applied SCD Type 1 and Type 4 for accurate historical data management.</li>
-                <li>Followed Agile methodology and utilized Azure DevOps for CI/CD pipeline management.</li>
-                <li>Utilized FDP framework for consistent end-to-end development practices.</li>
-                <li>Managed data migration to Azure Fabric, ensuring seamless integration of existing data.</li>
-            </ul>
-            <div class="skills">
-                <strong>Skills:</strong><br>
-                <span>Azure Service Fabric</span>
-                <span>PySpark</span>
-                <span>SQL</span>
-                <span>Python</span>
-                <span>Microsoft Power BI</span>
-                <span>CI/CD</span>
-                <span>DevOps</span>
-                <span>Agile</span>
-                <span>Scrum</span>
-                <span>ETL</span>
-                <span>Data Engineering</span>
-                <span>Data Warehousing</span>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="far fa-calendar-alt"></i></span>
+                        <span class="meta-text"><strong>Duration:</strong> Jan 2024 – Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="meta-text"><strong>Location:</strong> Mumbai, India</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-building"></i></span>
+                        <span class="meta-text"><strong>Client:</strong> Capgemini (Chanel)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-user-tie"></i></span>
+                        <span class="meta-text"><strong>Role:</strong> Data Engineer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-cogs"></i></span>
+                        <span class="meta-text"><strong>Technology:</strong> MS Fabric</span>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <h2 class="section-title">Project Achievements</h2>
+                    <ul>
+                        <li>Built and optimized scalable data pipelines using Microsoft Fabric, Azure Data Factory, Synapse Analytics, and Spark, improving processing speed by 30%.</li>
+                        <li>Developed Medallion Architecture in Lakehouse, enhancing structured and unstructured data accessibility.</li>
+                        <li>Implemented Fabric Dataflows and Notebooks for ETL/ELT transformations, ensuring efficient data processing and governance.</li>
+                        <li>Automated data integration processes using Python, PySpark, and SQL, reducing manual efforts by 50%.</li>
+                        <li>Designed and optimized Power BI datasets and semantic models, improving data visualization for stakeholders.</li>
+                        <li>Monitored and maintained high availability, reliability, and performance of Fabric workloads.</li>
+                        <li>Implemented RBAC and data security policies, ensuring compliance with enterprise standards.</li>
+                        <li>Led end-to-end monitoring and governance using Azure Monitor and Purview.</li>
+                        <li>Implemented and applied SCD Type 1 and Type 4 for accurate historical data management.</li>
+                        <li>Followed Agile methodology and utilized Azure DevOps for CI/CD pipeline management.</li>
+                        <li>Utilized FDP framework for consistent end-to-end development practices.</li>
+                        <li>Managed data migration to Azure Fabric, ensuring seamless integration of existing data.</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-container">
+                    <h2 class="skills-title">Technical Expertise</h2>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure Service Fabric</span>
+                        <span class="skill-tag"><i class="fas fa-fire"></i> PySpark</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</span>
+                        <span class="skill-tag"><i class="fas fa-code-branch"></i> CI/CD</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> DevOps</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Agile</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Scrum</span>
+                        <span class="skill-tag"><i class="fas fa-exchange-alt"></i> ETL</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> Data Engineering</span>
+                        <span class="skill-tag"><i class="fas fa-warehouse"></i> Data Warehousing</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> Azure Synapse</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> RBAC</span>
+                        <span class="skill-tag"><i class="fas fa-history"></i> SCD Types</span>
+                        <span class="skill-tag"><i class="fas fa-lake"></i> Lakehouse</span>
+                        <span class="skill-tag"><i class="fas fa-gem"></i> Medallion Architecture</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+      function goBack() {
+          // Try to go back in history
+          if (history.length > 1) {
+              history.back();
+          } 
+          // If no history (opened in new tab), go to projects section
+          else {
+              location.href = "index.html#project-section";
+          }
+          return false; // Prevent default behavior
+      }
+    </script>
 </body>
 </html>

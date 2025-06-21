@@ -6662,8 +6662,11 @@ button.bg-dark:focus {
 .mx-5 {
   margin-right: 3rem !important; }
 
-.mb-5,
+.mb-5{
+  color: white;
+}
 .my-5 {
+  color: white;
   margin-bottom: 3rem !important; }
 
 .ml-5,
