@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Retail - Data Migration & Integration | Microsoft Fabric Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css\projects.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+    <i class="fas fa-times"></i>
+    </button>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="header-image">
+                    <img src="images\retail\retail_project_background.png" alt="Luxury Retail Data Migration Project">
+                    <div class="header-overlay">
+                        <h1>Data Migration Transformation & Integration</h1>
+                        <p>Microsoft Fabric Implementation for Luxury Retail client</p>
+                    </div>
+                </div>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="far fa-calendar-alt"></i></span>
+                        <span class="meta-text"><strong>Duration:</strong> Jan 2023 - Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="meta-text"><strong>Location:</strong> Mumbai, India</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-building"></i></span>
+                        <span class="meta-text"><strong>Client:</strong> Capgemini (Luxury Retail client)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-user-tie"></i></span>
+                        <span class="meta-text"><strong>Role:</strong> Data Engineer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-cogs"></i></span>
+                        <span class="meta-text"><strong>Technology:</strong> MS Fabric</span>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <h2 class="section-title">Project Achievements</h2>
+                    <ul>
+                        <li>Built and optimized scalable data pipelines using Microsoft Fabric, Azure Data Factory, Synapse Analytics, and Spark, improving processing speed by 30%.</li>
+                        <li>Developed Medallion Architecture in Lakehouse, enhancing structured and unstructured data accessibility.</li>
+                        <li>Implemented Fabric Dataflows and Notebooks for ETL/ELT transformations, ensuring efficient data processing and governance.</li>
+                        <li>Automated data integration processes using Python, PySpark, and SQL, reducing manual efforts by 50%.</li>
+                        <li>Designed and optimized Power BI datasets and semantic models, improving data visualization for stakeholders.</li>
+                        <li>Monitored and maintained high availability, reliability, and performance of Fabric workloads.</li>
+                        <li>Implemented RBAC and data security policies, ensuring compliance with enterprise standards.</li>
+                        <li>Led end-to-end monitoring and governance using Azure Monitor and Purview.</li>
+                        <li>Implemented and applied SCD Type 1 and Type 4 for accurate historical data management.</li>
+                        <li>Followed Agile methodology and utilized Azure DevOps for CI/CD pipeline management.</li>
+                        <li>Utilized FDP framework for consistent end-to-end development practices.</li>
+                        <li>Managed data migration to Azure Fabric, ensuring seamless integration of existing data.</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-container">
+                    <h2 class="skills-title">Technical Expertise</h2>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure Service Fabric</span>
+                        <span class="skill-tag"><i class="fas fa-fire"></i> PySpark</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</span>
+                        <span class="skill-tag"><i class="fas fa-code-branch"></i> CI/CD</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> DevOps</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Agile</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Scrum</span>
+                        <span class="skill-tag"><i class="fas fa-exchange-alt"></i> ETL</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> Data Engineering</span>
+                        <span class="skill-tag"><i class="fas fa-warehouse"></i> Data Warehousing</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> Azure Synapse</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> RBAC</span>
+                        <span class="skill-tag"><i class="fas fa-history"></i> SCD Types</span>
+                        <span class="skill-tag"><i class="fas fa-lake"></i> Lakehouse</span>
+                        <span class="skill-tag"><i class="fas fa-gem"></i> Medallion Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function goBack() {
+          // Try to go back in history
+          if (history.length > 1) {
+              history.back();
+          } 
+          // If no history (opened in new tab), go to projects section
+          else {
+              location.href = "index.html#project-section";
+          }
+          return false; // Prevent default behavior
+      }
+    </script>
+</body>
+</html>

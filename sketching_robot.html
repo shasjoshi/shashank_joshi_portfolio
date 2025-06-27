@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketching Robot Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css\projects.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="header-image">
+                    <img src="images/sketching-robot/proj_5.jpg" alt="Palantir Project Dashboard">
+                    <div class="header-overlay">
+                        <h1>Sketching Robot</h1>
+                        <p>Arduino UNO based electronic project</p>
+                    </div>
+                </div>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="far fa-calendar-alt"></i></span>
+                        <span class="meta-text"><strong>Duration:</strong> Nov 2021 – Feb 2022</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="meta-text"><strong>Location:</strong> Pune, India</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-building"></i></span>
+                        <span class="meta-text"><strong>College:</strong> Dr. DY Patil Institue of Technology (B.E. Project)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-user-tie"></i></span>
+                        <span class="meta-text"><strong>Role:</strong> Arduino </span>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <h2 class="section-title">Project Overview</h2>
+                    <ul>
+                        <li>Designed and developed a lightweight, portable XY-axis sketching robot capable of drawing on walls, glass, and paper with high precision.</li>
+                        <li>Enabled support for SVG (Scalable Vector Graphics) input, allowing users to upload and sketch complex images through open-source Makelangelo software.</li>
+                        <li>Utilized Arduino UNO microcontroller for motion control and pen actuation, ensuring ease of use and integration.</li>
+                        <li>Engineered custom mechanical parts, such as the pen holder and motor brackets, in CATIA and fabricated them using 3D printing technology.</li>
+                        <li>Implemented a GT2 pulley belt mechanism driven by two stepper motors for X and Y-axis movement and a servo motor for pen up/down control.</li>
+                        <li>Achieved smooth, coordinated motion for accurate sketching, with effective synchronization between the control system and mechanical structure.</li>
+                        <li>Focused on creating a cost-effective and versatile solution that can draw on various surfaces including A4 sheets, panels, and vertical surfaces.</li>
+                        <li>Developed with modularity and scalability in mind, making it suitable for art automation, educational use, and prototyping in robotics projects.</li>
+                    </ul>
+                </div>
+                
+                <div class="slider-container">
+                    <h2 class="section-title">Project Gallery</h2>
+                    <div class="gallery">
+                        <div class="gallery-item" data-index="0">
+                            <video src="images/sketching-robot/demo-video.mp4" autoplay loop muted playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="gallery-caption">XY Axis Sketching Robot in Action</div>
+                        </div>
+                        <div class="gallery-item" data-index="1">
+                            <img src="images/sketching-robot/Appreciation.jpg" alt="Appreciation">
+                            <div class="gallery-caption">Appreciation</div>
+                        </div>
+                        <div class="gallery-item" data-index="2">
+                            <img src="images/sketching-robot/catia_design.png" alt="Catia Model Design Assembly">
+                            <div class="gallery-caption">Catia Model Design Assembly</div>
+                        </div>
+                        <div class="gallery-item" data-index="3">
+                            <img src="images/sketching-robot/actual_photo.png" alt="Actual photo of project">
+                            <div class="gallery-caption">Actual photo of project</div>
+                        </div>
+                        <div class="gallery-item" data-index="4">
+                            <img src="images/sketching-robot/wiring_diagram.PNG" alt="Wiring Diagram">
+                            <div class="gallery-caption">Wiring Diagram</div>
+                        </div>
+                        <div class="gallery-item" data-index="5">
+                            <img src="images/sketching-robot/sample_outputs.jpg" alt="Sample Outputs">
+                            <div class="gallery-caption">Sample Outputs</div>
+                        </div>
+                        <div class="gallery-item" data-index="6">
+                            <img src="images/sketching-robot/software_interface.PNG" alt="Control System and Software Interface">
+                            <div class="gallery-caption">Control System and Software Interface</div>
+                        </div>
+                        <div class="gallery-item" data-index="7">
+                            <img src="images/sketching-robot/machine_design.PNG" alt="Mechanical Dimension">
+                            <div class="gallery-caption">Mechanical Dimension</div>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="https://github.com/shasjoshi/Development-of-sketching-robot.git" 
+                                class="align-self-stretch box p-4 text-center contact-info-box d-block w-100 text-reset text-decoration-none"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style="color: inherit;">
+                            <img src="images/sketching-robot/moredetail.jpg" alt="More Details">
+                            <div class="gallery-caption">More Details</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-container">
+                    <h2 class="skills-title">Technologies & Skills</h2>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fas fa-microchip"></i> Arduino UNO</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> Stepper Motors</span>
+                        <span class="skill-tag"><i class="fas fa-cogs"></i> Servo Motor</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> C++ (Arduino IDE)</span>
+                        <span class="skill-tag"><i class="fas fa-drafting-compass"></i> CATIA</span>
+                        <span class="skill-tag"><i class="fas fa-vector-square"></i> SVG Processing</span>
+                        <span class="skill-tag"><i class="fas fa-screwdriver"></i> Mechanical Assembly</span>
+                        <span class="skill-tag"><i class="fas fa-bolt"></i> Electronics Wiring</span>
+                        <span class="skill-tag"><i class="fas fa-desktop"></i> Makelangelo Software</span>
+                        <span class="skill-tag"><i class="fas fa-ruler-combined"></i> Dimensional Analysis</span>
+                        <span class="skill-tag"><i class="fas fa-hand-holding-box"></i> Prototyping</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> G-code Interpretation</span>
+                        <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+                        <span class="skill-tag"><i class="fas fa-file-invoice"></i> Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Media Details</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-media-container">
+                    <img class="modal-image" id="modalImage" src="" alt="" style="display: none;">
+                    <video class="modal-video" id="modalVideo" src="" controls autoplay loop muted playsinline style="display: none;"></video>
+                </div>
+                <div class="modal-description" id="modalDescription">
+                    <h3>Detailed View</h3>
+                    <p>This is a detailed view of the selected media.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="image-descriptions" style="display: none;">
+        <div data-index="0">
+            <h3>XY Axis Sketching Robot in Action</h3>
+            <p>This demonstration showcases our fully functional XY Axis Sketching Robot autonomously drawing complex designs with precision. Key features visible in the video.</p>
+        </div>
+       <div data-index="1">
+            <h3>Certificate of Appreciation</h3>
+            <p>This image displays the Certificate of Appreciation received for the "Development of Sketching Robot" project. It acknowledges the successful completion and innovative aspects of the project, highlighting its contribution as an electronic engineering endeavor.</p>
+        </div>
+        <div data-index="2">
+            <h3>CATIA Model Design Assembly</h3>
+            <p>A detailed view of the 3D design assembly of the sketching robot created in CATIA. This model showcases the precise engineering of custom mechanical parts, including the pen holder, motor mounts, and the overall structural framework, ensuring optimal functionality and stability.</p>
+        </div>
+        <div data-index="3">
+            <h3>Actual Photo of the Project</h3>
+            <p>This photograph captures the physical realization of the sketching robot, showcasing its compact and portable design. It highlights the integration of the mechanical components, the Arduino UNO board, and the wiring, demonstrating the practical assembly of the prototype.</p>
+        </div>
+        <div data-index="4">
+            <h3>Wiring Diagram</h3>
+            <p>An intricate wiring diagram illustrating the electrical connections within the sketching robot. This diagram details the connections between the Arduino UNO, stepper motor drivers, stepper motors, servo motor, and power supply, ensuring correct and safe operation of the system.</p>
+        </div>
+        <div data-index="5">
+            <h3>Sample Outputs</h3>
+            <p>A collection of various designs and sketches produced by the robot on different surfaces. These samples demonstrate the robot's ability to accurately reproduce complex SVG inputs, showcasing the precision and versatility of its drawing capabilities across various media.</p>
+        </div>
+        <div data-index="6">
+            <h3>Control System and Software Interface</h3>
+            <p>An illustration or screenshot depicting the interface of the Makelangelo software used to control the robot, alongside a conceptual diagram of the Arduino-based control system. This emphasizes how SVG inputs are processed and translated into precise motor commands for sketching.</p>
+        </div>
+        <div data-index="7">
+            <h3>Machine Dimensions</h3>
+            <p>This diagram outlines critical machine dimensions for an XY-axis device. It shows the total "MACHINE WIDTH" and "MACHINE HEIGHT". A "HOME POINT" is defined at the vertical "centreline" (half of the machine width) and 120mm below the "top edge of page". "Sprocket outlines" at the top corners indicate the horizontal limits of the mechanism.</p>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Gallery item click handler
+            $(".gallery-item").click(function () {
+                const index = $(this).data("index");
+                const videoElement = $(this).find("video");
+                const imageElement = $(this).find("img");
+                let mediaSrc = "";
+                let mediaAlt = "";
+
+                // Determine if it's a video or an image
+                if (videoElement.length) {
+                    mediaSrc = videoElement.attr("src");
+                    mediaAlt = $(this).find(".gallery-caption").text() || "Video Details";
+                } else if (imageElement.length) {
+                    mediaSrc = imageElement.attr("src");
+                    mediaAlt = imageElement.attr("alt");
+                }
+
+                // Clear previous content and hide both
+                $("#modalImage").hide().attr("src", "").attr("alt", "");
+                $("#modalVideo").hide().attr("src", "").trigger("pause"); // Pause video when hiding
+
+                // Update the modal based on media type
+                if (videoElement.length) {
+                    $("#modalVideo").show().attr("src", mediaSrc).trigger("play"); // Play video when showing
+                } else if (imageElement.length) {
+                    $("#modalImage").show().attr("src", mediaSrc).attr("alt", mediaAlt);
+                }
+
+                const description = $('.image-descriptions div[data-index="' + index + '"]').html();
+                $("#modalDescription").html(description);
+                $("#modalTitle").text(mediaAlt);
+
+                // Show the modal
+                $("#imageModal").addClass("show");
+                $("body").css("overflow", "hidden");
+            });
+
+            // Close modal
+            $(".modal-close, #imageModal").click(function (e) {
+                if (e.target === this || $(e.target).hasClass("modal-close")) {
+                    $("#imageModal").removeClass("show");
+                    $("body").css("overflow", "auto");
+                    $("#modalVideo").trigger("pause").attr("src", ""); // Pause and clear video source
+                }
+            });
+
+            // Prevent modal content click from closing modal
+            $(".modal-content").click(function (e) {
+                e.stopPropagation();
+            });
+
+            // Keyboard navigation
+            $(document).keydown(function (e) {
+                if ($("#imageModal").hasClass("show")) {
+                    if (e.key === "Escape") {
+                        $("#imageModal").removeClass("show");
+                        $("body").css("overflow", "auto");
+                        $("#modalVideo").trigger("pause").attr("src", ""); // Pause and clear video source on escape
+                    }
+                }
+            });
+        });
+
+        function goBack() {
+            // Try to go back in history
+            if (history.length > 1) {
+                history.back();
+            } else {
+                location.href = "index.html#project-section";
+            }
+            return false; // Prevent default behavior
+        }
+    </script>
+</body>
+</html>
