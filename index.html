@@ -318,7 +318,7 @@
                                 <h2 class="mb-4">Senior Data Engineer</h2>
                                 <p class="mb-4">Transforming raw data into actionable insights through scalable cloud solutions</p>
                                 <p>
-                                    <a href="https://www.linkedin.com/in/shashank-joshi2306/" class="btn btn-primary py-3 px-4 mr-3 ">
+                                    <a href="https://www.linkedin.com/in/shashank-joshi2306/" class="btn btn-primary py-3 px-4 mr-3 " target="_blank">
                                         <i class="fab fa-linkedin-in"></i> Connect
                                     </a> 
                                     <a href="#project-section" class="btn btn-white btn-outline-white py-3 px-4">
@@ -349,7 +349,7 @@
                                     <div class="about-info">
                                         <p><span class="title-s">Name: </span> <span>Shashank Joshi</span></p>
                                         <p><span class="title-s">Role: </span> <span>Senior Data Engineer</span></p>
-                                        <p><span class="title-s">Experience: </span> <span>3 Years</span></p>
+                                        <p><span class="title-s">Experience: </span> <span id="experience-duration">3 Years</span></p>
                                         <p><span class="title-s">Location: </span> <span>Mumbai, India</span></p>
                                     </div>
                                 </div>
@@ -476,9 +476,12 @@
                                         <span>&nbsp; Successful Projects</span>
                                     </p>
                                     <p>
-                                    <a href="#contact-section" class="btn btn-primary py-3 px-4 mr-3" >
+                                    <a href="https://www.linkedin.com/in/shashank-joshi2306/" class="btn btn-primary py-3 px-4 mr-3" target="_blank">
                                         <i class="fab fa-linkedin-in"></i> Let's Connect
-                                    </a> 
+                                    
+                                        <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">
+                                        <i class=""></i> contact Me
+                                    </a>
                                     <a href="https://s8ndr-my.sharepoint.com/:b:/g/personal/shashujoshi2306_s8ndr_onmicrosoft_com/EVnFRa-JiCFNkMp6qO2tYPgBLwLDHWBx4otfBKCnpy8vpw?e=sWuAyF" class="btn btn-white btn-outline-white py-3 px-4" target="_blank"
 					                     rel="noopener noreferrer">
                                         <i class="fas fa-laptop-code"></i> Download CV
@@ -1184,6 +1187,32 @@
         }
 
         playTypingAnimation(typingTexts[0]);
+    </script>
+
+    <script>
+        // Calculate duration from Oct 2022 to today and write into #experience-duration
+        (function () {
+            const el = document.getElementById('experience-duration');
+            if (!el) return;
+
+            const start = new Date(2022, 9, 1); // October is month 9 (0-indexed)
+            const now = new Date();
+
+            // total months difference
+            let totalMonths = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+            if (now.getDate() < start.getDate()) totalMonths -= 1;
+            if (totalMonths < 0) totalMonths = 0;
+
+            const years = Math.floor(totalMonths / 12);
+            const months = totalMonths % 12;
+
+            const parts = [];
+            if (years > 0) parts.push(years + ' year' + (years === 1 ? '' : 's'));
+            if (months > 0) parts.push(months + ' month' + (months === 1 ? '' : 's'));
+            if (parts.length === 0) parts.push('Less than a month');
+
+            el.textContent = parts.join(' ');
+        })();
     </script>
 
     <!-- Loader -->
