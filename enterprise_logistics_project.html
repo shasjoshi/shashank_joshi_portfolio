@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Data Migration & Analytics Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css\projects.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+    <i class="fas fa-times"></i>
+    </button>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="header-image">
+                    <img src="images\enterprise_project\enterprise_project_background.png" alt="Enterprise Data Migration Project">
+                    <div class="header-overlay">
+                        <h1>Enterprise Data Migration & Analytics Platform</h1>
+                        <p>Azure Cloud Implementation</p>
+                    </div>
+                </div>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="far fa-calendar-alt"></i></span>
+                        <span class="meta-text"><strong>Duration:</strong> Aug 2025 - Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="meta-text"><strong>Location:</strong> Mumbai, India</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-user-tie"></i></span>
+                        <span class="meta-text"><strong>Role:</strong> Senior Data Engineer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon"><i class="fas fa-cogs"></i></span>
+                        <span class="meta-text"><strong>Technology:</strong> Azure Cloud Services</span>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <h2 class="section-title">Project Achievements</h2>
+                    <ul>
+                        <li>Designed and implemented comprehensive data migration strategies from Oracle databases to Azure SQL, ensuring data integrity and minimal downtime.</li>
+                        <li>Built scalable ETL/ELT pipelines using Azure Data Factory (ADF) for automated data processing and transformation workflows.</li>
+                        <li>Developed complex data pipelines in Azure Databricks (ADB) using PySpark and Python for big data analytics and processing.</li>
+                        <li>Implemented data lake architecture on Azure Data Lake Storage (ADLS) for structured and unstructured data management.</li>
+                        <li>Performed Oracle query conversion and optimization for Azure SQL environment, improving query performance by 40%.</li>
+                        <li>Created API-triggered data ingestion pipelines for real-time data processing and integration.</li>
+                        <li>Established data governance frameworks with proper security policies and access controls.</li>
+                        <li>Monitored pipeline performance and implemented automated alerting using Azure Monitor.</li>
+                        <li>Collaborated with cross-functional teams to ensure seamless data migration and system integration.</li>
+                        <li>Implemented CI/CD practices for data pipeline deployment and version control.</li>
+                        <li>Conducted data validation and reconciliation processes to ensure accuracy of migrated data.</li>
+                        <li>Led knowledge transfer sessions and documented best practices for ongoing maintenance.</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-container">
+                    <h2 class="skills-title">Technical Expertise</h2>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure Data Factory</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> Azure Databricks</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> Azure Data Lake Storage</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Azure SQL</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> Oracle</span>
+                        <span class="skill-tag"><i class="fas fa-fire"></i> PySpark</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-exchange-alt"></i> ETL/ELT</span>
+                        <span class="skill-tag"><i class="fas fa-code-branch"></i> CI/CD</span>
+                        <span class="skill-tag"><i class="fas fa-plug"></i> API Integration</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> Data Security</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Data Migration</span>
+                        <span class="skill-tag"><i class="fas fa-search"></i> Query Optimization</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Data Governance</span>
+                        <span class="skill-tag"><i class="fas fa-clock"></i> Real-time Processing</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Pipeline Orchestration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function goBack() {
+          // Try to go back in history
+          if (history.length > 1) {
+              history.back();
+          } 
+          // If no history (opened in new tab), go to projects section
+          else {
+              location.href = "index.html#project-section";
+          }
+          return false; // Prevent default behavior
+      }
+    </script>
+</body>
+</html>
